@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - Osmania University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to left, rgb(117, 196, 200), rgb(225, 235, 156));
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .header {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 600;
+            animation: slideInDown 1s ease-in-out;
+        }
+        .header h3 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 300;
+            animation: slideInUp 1s ease-in-out;
+        }
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .login-form input {
+            margin: 10px 0;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .login-form input:focus {
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        .login-form button {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background: #FFC1CC;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .login-form button:hover {
+            background: #FFAFBD;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 175, 189, 0.4);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Osmania University</h1>
+            <h3>Department of Mathematics</h3>
+        </div>
+        <form class="login-form" id="loginForm">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'page3.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title> Student Dashboard</title>
+</head>
+<body>
+    <body onload="displayStudentDetails()">
+        <div class="sidebar-left">
+            <h3>Student Details</h3>
+            <img src="std.jpg" alt="Student Icon">
+            <div class="details">
+                <p><strong>Name:</strong> <span id="student-name"></span></p>
+                <p><strong>Roll Number:</strong> <span id="roll-number"></span></p>
+                <p><strong>DOB:</strong> <span id="student-dob"></span></p>
+                <p><strong>Course:</strong> <span id="student-course"></span></p>
+            </div>
+        </div>
+    
+        <div class="main-content">
+            <div class="menu-bar">
+                <a href="page3.html" onclick="logout()" class="logout">Logout</a>
+            </div>
+    
+            <h2>Student Dashboard</h2>
+    
+            <div class="dashboard-section">
+                <div class="card">
+                    <h3>Academic Syllabus</h3>
+                    <p>Access the syllabus for your courses.</p>
+                    <button onclick="showSyllabus()">View Syllabus</button>
+                </div>
+               
+                <div class="card">
+                    <h3>View Exams</h3>
+                    <p>Check the upcoming exams and schedules.</p>
+                    <button onclick="showExam()">View Exams</button>
+                </div>
+                <div class="card">
+                    <h3>Projects</h3>
+                    <p>Check previous projects here.</p>
+                    <button onclick="showProjects()">Projects</button>
+                </div>
+                <div class="card">
+                    <h3>Connect with Faculty Members</h3>
+                    <p>Messages here</p>
+                    <button onclick="showConnect()">Connect</button>
+                </div>
+                <div class="card">
+                    <h3>Notes and Assignments</h3>
+                    <p>Check Notes and Assignments here...</p>
+                    <button onclick="showNotes()">Notes</button>
+                </div>
+            </div>
+    
+            <div class="pdf-section" id="syllabus-section">
+                <button class="close-button" onclick="hideSyllabus()">Close</button>
+                <h2>Academic Syllabus</h2>
+                <iframe id="syllabus-iframe" src="syl.pdf"></iframe>
+            </div>
+    
+            <div class="pdf-section" id="notes-section">
+                <button class="close-button" onclick="hideNotes()">Close</button>
+                <h2>Notes and Assignments</h2>
+                <iframe id="notes-iframe" src="https://drive.google.com/embeddedfolderview?id=1lz--wpB4sua5lRoZu4ujUpmG705_fVLg"></iframe>
+            </div>
+    
+            <div class="pdf-section" id="projects-section">
+                <button class="close-button" onclick="hideProjects()">Close</button>
+                <h2>Check Previous Projects Here</h2>
+                <iframe src="https://drive.google.com/embeddedfolderview?id=12kl_ckKZ2bujtFhWkS1T9HXabguie9Bj#grid" width="640" height="480" allow="autoplay"></iframe>
+</div>
+    
+            <div class="pdf-section" id="exam-section">
+                <button class="close-button" onclick="hideExam()">Close</button>
+                <h2>View Exam</h2>
+                <iframe id="exam-iframe" src="exm.pdf"></iframe>
+            </div>
+        </div>
+    
+        <button class="menu-button" onclick="toggleSidebar()">☰</button>
+        <div class="sidebar-right">
+            <h2>Additional Options</h2>
+            <ul>
+                <li><a href="page7.html">Activities</a></li>
+                <li><a href="page6.html">Health</a></li>
+                <li><a href="page8.html">Campus Map</a></li>
+                <li><a href="photos.html">Gallery</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Assignments</a></li>
+                <li><a href="#">Alumni Network</a></li>
+            </ul>
+        </div>
+    
+        <script src ="style1.js">
+    </script>
+    
+</body>
+</html>
